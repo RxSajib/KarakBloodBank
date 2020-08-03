@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ProfileID"
+        android:title="profile"
+        android:icon="@drawable/profile"
+        ></item>
+
+    <item
+        android:id="@+id/StokeID"
+        android:title="Stock"
+        android:icon="@drawable/stoke"
+        ></item>
+
+
+    <item
+        android:id="@+id/ShareID"
+        android:title="Share"
+        android:icon="@drawable/share"
+        ></item>
+
+    <item
+        android:id="@+id/FeedbackID"
+        android:title="Feedback"
+        android:icon="@drawable/feedback"
+        ></item>
+
+
+
+
+
+    <item
+        android:id="@+id/SupportUsID"
+        android:title="One Touch "
+        android:icon="@drawable/onetouch"
+        ></item>
+
+    <item
+        android:id="@+id/LogOutID"
+        android:title="LogOut"
+        android:icon="@drawable/exit"
+        ></item>
+
+</menu>

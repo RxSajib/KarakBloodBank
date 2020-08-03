@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "376346558551",
+    "firebase_url": "https://karakbloodbank-1482d.firebaseio.com",
+    "project_id": "karakbloodbank-1482d",
+    "storage_bucket": "karakbloodbank-1482d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376346558551:android:1e96c04411d0fa97746312",
+        "android_client_info": {
+          "package_name": "com.thomas.karakbloodbankupdate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376346558551-v53cg466luljak2ha26bir1lpidbc6rm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thomas.karakbloodbankupdate",
+            "certificate_hash": "0cfe640c0302148629acd19dbaca1d381ea87d0d"
+          }
+        },
+        {
+          "client_id": "376346558551-j2mmhhljovbe29dteq1j7kksrr8ljng6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFIsIk3jNC9-8IiuCY2byOqTDspqGGSvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376346558551-j2mmhhljovbe29dteq1j7kksrr8ljng6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

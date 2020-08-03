@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="AllNavagationPage.StokePage">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+
+
+       <RelativeLayout
+           android:id="@+id/TopLayoutId"
+           android:layout_width="match_parent"
+           android:background="@drawable/porfile_background"
+           android:layout_height="140dp">
+
+
+           <ImageView
+               android:id="@+id/BcakButtonID"
+               android:layout_centerVertical="true"
+               android:layout_width="35dp"
+               android:layout_marginLeft="7dp"
+               android:src="@drawable/back_icon"
+               android:layout_height="35dp">
+           </ImageView>
+
+
+           <RelativeLayout
+               android:id="@+id/TopLayout"
+               android:background="@drawable/sender_design"
+               android:layout_width="200dp"
+               android:layout_centerVertical="true"
+               android:layout_alignParentRight="true"
+               android:layout_height="wrap_content">
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <RelativeLayout
+                       android:id="@+id/SS"
+                       android:layout_margin="5dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+
+
+                       <ImageView
+                           android:id="@+id/Donaricon"
+                           android:layout_width="30dp"
+                           android:layout_centerVertical="true"
+                           android:src="@drawable/donor"
+                           android:layout_height="30dp">
+                       </ImageView>
+
+                       <com.google.android.material.textview.MaterialTextView
+                           android:id="@+id/TotalDonorID"
+                           android:layout_toRightOf="@id/Donaricon"
+                           android:layout_centerVertical="true"
+                           android:layout_marginLeft="10dp"
+                           android:fontFamily="sans-serif-condensed"
+
+                           android:textSize="14sp"
+                           android:text="Total Donor :0"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content">
+
+                       </com.google.android.material.textview.MaterialTextView>
+
+                   </RelativeLayout>
+
+                   <RelativeLayout
+                       android:layout_below="@+id/SS"
+                       android:layout_width="match_parent"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginBottom="5dp"
+                       android:layout_height="wrap_content">
+
+                       <ImageView
+                           android:id="@+id/Recivericon"
+                           android:layout_width="30dp"
+                           android:layout_centerVertical="true"
+                           android:src="@drawable/teasttube"
+                           android:layout_height="30dp">
+                       </ImageView>
+
+                       <com.google.android.material.textview.MaterialTextView
+                           android:id="@+id/TotalReciverID"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="10dp"
+                           android:fontFamily="sans-serif-condensed"
+
+                           android:layout_toRightOf="@id/Recivericon"
+                           android:text="Total Request :0"
+                           android:textSize="14sp">
+
+                       </com.google.android.material.textview.MaterialTextView>
+
+                   </RelativeLayout>
+
+               </RelativeLayout>
+
+           </RelativeLayout>
+
+
+       </RelativeLayout>
+
+       <com.google.android.material.bottomnavigation.BottomNavigationView
+           android:layout_alignParentBottom="true"
+           android:layout_width="match_parent"
+           android:id="@+id/BottomnavID"
+           app:menu="@menu/bottom_nav_iteams"
+           android:layout_height="wrap_content">
+
+       </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+       <RelativeLayout
+           android:layout_above="@+id/BottomnavID"
+           android:layout_below="@+id/TopLayoutId"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+
+           <FrameLayout
+               android:id="@+id/StokeFream"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+           </FrameLayout>
+
+
+       </RelativeLayout>
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_marginTop="170dp"
+           android:layout_marginLeft="15dp"
+           android:layout_marginRight="15dp"
+           android:layout_height="match_parent">
+
+
+
+
+       </RelativeLayout>
+
+
+   </RelativeLayout>
+
+</RelativeLayout>

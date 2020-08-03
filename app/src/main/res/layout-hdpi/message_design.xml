@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:layout_height="wrap_content">
+
+
+
+    <!--documtnt-->
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/SSenderDocuentLayoutID"
+
+        android:background="@drawable/sender_design"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="220dp"
+        android:layout_height="140dp">
+
+        <TextView
+            android:id="@+id/SSenderDocumentTimeID"
+            android:textSize="13sp"
+            android:text="12:25"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+
+
+        <ImageView
+            android:id="@+id/SSenderDocImage"
+            android:layout_below="@+id/SSenderDocumentTimeID"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/filesicon"
+            android:layout_above="@+id/SSenderDocuntButtonID"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_height="match_parent">
+        </ImageView>
+
+        <Button
+            android:id="@+id/SSenderDocuntButtonID"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/sender_document_download_button"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="7dp"
+            android:elevation="1dp"
+            android:textColor="@android:color/black"
+            android:text="Download"
+            android:layout_marginRight="20dp">
+
+        </Button>
+
+    </RelativeLayout>
+
+
+    <!--documtnt-->
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/ReciverDocuentLayoutID"
+        android:background="@drawable/reciver_design"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_width="220dp"
+        android:layout_height="140dp">
+
+        <TextView
+            android:id="@+id/ReciverDocumentTimeID"
+            android:textSize="13sp"
+            android:text="12:25"
+            android:fontFamily="sans-serif-condensed"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+
+
+        <ImageView
+            android:id="@+id/ReciverdocImage"
+            android:layout_below="@+id/ReciverDocumentTimeID"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/filesicon"
+            android:layout_above="@+id/ReciverDocuntButtonID"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_height="match_parent">
+        </ImageView>
+
+        <Button
+            android:id="@+id/ReciverDocuntButtonID"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-condensed"
+
+            android:background="@drawable/sender_document_download_button"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="7dp"
+            android:elevation="1dp"
+            android:textColor="@android:color/black"
+            android:text="Download"
+            android:layout_marginRight="20dp">
+
+        </Button>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+    <!--image-->
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/SenderImageLayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="220dp"
+        android:background="@drawable/sender_design"
+        android:layout_height="140dp">
+
+        <ProgressBar
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ProgressBar>
+
+        <TextView
+            android:id="@+id/SenderImageTime"
+            android:textSize="13sp"
+            android:text="12:25"
+            android:fontFamily="sans-serif-condensed"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/SenderImage"
+            android:layout_below="@+id/SenderImageTime"
+            android:scaleType="centerCrop"
+            android:layout_width="250dp"
+            android:elevation="2dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="7dp"
+            android:layout_height="170dp">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+
+
+    <!--image-->
+    <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/ReciverImageLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:layout_margin="5dp"
+        android:layout_width="220dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/reciver_design"
+        android:layout_height="140dp">
+
+        <ProgressBar
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ProgressBar>
+
+        <TextView
+            android:id="@+id/ReciverImageTime"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-condensed"
+
+            android:text="12:25"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/ReciverImage"
+            android:layout_below="@+id/ReciverImageTime"
+            android:layout_width="250dp"
+            android:layout_marginTop="3dp"
+            android:elevation="2dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="170dp">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+    <!--message-->
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/SenderLayoutID"
+        android:background="@drawable/sender_design"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_marginLeft="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/SenderMessageTimeID"
+            android:textSize="10sp"
+            android:text="12:25"
+            android:fontFamily="sans-serif-condensed"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:layout_below="@+id/SenderMessageTimeID"
+            android:id="@+id/SenderMessageID"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-condensed"
+
+            android:textColor="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:text="hello how are you i am go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <!--message-->
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:id="@+id/ReciverLayoutID"
+        android:background="@drawable/reciver_design"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_marginRight="100dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/RReciverMessageTime"
+            android:textSize="10sp"
+            android:text="12:25"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:layout_below="@+id/RReciverMessageTime"
+            android:id="@+id/ReciverMessageID"
+            android:textSize="12sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-condensed"
+
+            android:layout_marginTop="5dp"
+            android:text="hello hi there"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

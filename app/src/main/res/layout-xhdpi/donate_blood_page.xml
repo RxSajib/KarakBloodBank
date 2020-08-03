@@ -1,0 +1,707 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="PostPage.DonateBloodPage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/AddPostActivityID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/UpdateButtonID"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/done_icon">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/backIconID"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back_icon">
+
+                </ImageView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@id/backIconID"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Add Donor Post"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/AddPostActivityID"
+            android:background="@color/colorPrimary">
+
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/AdtwoID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/BannerAd"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-8213826839161591/6125977030"></com.google.android.gms.ads.AdView>
+
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="3dp"
+            app:cardCornerRadius="10dp">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/RViewID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/DonarPostprofileImageID"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
+                            android:elevation="1dp"
+                            android:src="@drawable/defaultimage">
+
+                        </de.hdodenhof.circleimageview.CircleImageView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/DonarPostprofileImageID"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Upload image"
+                            android:textSize="14sp">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/View"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/RViewID"
+                        android:layout_marginTop="10dp"
+                        android:background="#969696">
+
+                    </View>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/nametextid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/View"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Name"
+
+                        android:textColor="#5E5E5E"
+                        android:textSize="14sp"></com.google.android.material.textview.MaterialTextView>
+
+
+                    <EditText
+                        android:id="@+id/DnameID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nametextid"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/email_stoke"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Your Name"
+                        android:maxLength="14"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textSize="14dp"></EditText>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/DageID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/DnameID"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Age"
+                        android:textColor="#5E5E5E"
+                        android:textSize="16sp"
+                        android:visibility="gone"></com.google.android.material.textview.MaterialTextView>
+
+                    <RelativeLayout
+                        android:id="@+id/DAgeButtonID"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@+id/DageID"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/email_stoke"
+                        android:visibility="gone">
+
+                        <Spinner
+                            android:id="@+id/SpinnerID"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="40dp"
+                            android:clickable="true"></Spinner>
+
+                        <ImageView
+                            android:id="@+id/calender"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="7dp"
+                            android:src="@drawable/ageicon"></ImageView>
+
+
+                    </RelativeLayout>
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/Maletext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/DAgeButtonID"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Gender"
+                        android:textColor="#5E5E5E"
+
+                        android:textSize="14sp"></com.google.android.material.textview.MaterialTextView>
+
+                    <LinearLayout
+                        android:id="@+id/GenderLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Maletext"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:id="@+id/DFemailLayoutID"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/genderstoke"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:id="@+id/DFemaleIcon"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/clircle_box"></ImageView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/DFemaleIcon"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Female"
+                                android:textColor="@android:color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/DMaleLayoutID"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/genderstoke"
+                            android:gravity="center_vertical">
+
+
+                            <ImageView
+                                android:id="@+id/DMale"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/clircle_box"></ImageView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/DMale"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="Male"
+                                android:textColor="@android:color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/Dmobilenumbertext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/GenderLayout"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Mobile Number"
+
+                        android:textColor="#5E5E5E"
+                        android:textSize="14sp"></com.google.android.material.textview.MaterialTextView>
+
+                    <EditText
+                        android:id="@+id/DMobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Dmobilenumbertext"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/email_stoke"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Mobile Number"
+                        android:inputType="number"
+                        android:maxLength="17"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textSize="14dp"></EditText>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/Dbloodtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/DMobileNumber"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Blood Group"
+                        android:textColor="#5E5E5E"
+                        android:textSize="14sp"></com.google.android.material.textview.MaterialTextView>
+
+                    <RelativeLayout
+                        android:id="@+id/OneLayoutID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Dbloodtext"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="4">
+
+                            <RelativeLayout
+                                android:id="@+id/DAbplusButtonID"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/genderstoke">
+
+                                <ImageView
+                                    android:id="@+id/DAplusIcon"
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/clircle_box"></ImageView>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@+id/DAplusIcon"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="A+"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14dp" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/DAminusButtonID"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/genderstoke">
+
+                                <ImageView
+                                    android:id="@+id/DAminusicon"
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/clircle_box"></ImageView>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@+id/DAminusicon"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="A-"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14dp" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/DBplusButtonID"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/genderstoke">
+
+                                <ImageView
+                                    android:id="@+id/DBplusicon"
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/clircle_box"></ImageView>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@+id/DBplusicon"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="B+"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14sp" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/DBminusButtonID"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/genderstoke">
+
+                                <ImageView
+                                    android:id="@+id/DBminusicon"
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/clircle_box"></ImageView>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@+id/DBminusicon"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="B-"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14dp" />
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/BB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/OneLayoutID"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="4">
+
+                            <RelativeLayout
+                                android:id="@+id/DOplusButtonID"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/genderstoke">
+
+                                <ImageView
+                                    android:id="@+id/DOplusicon"
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/clircle_box"></ImageView>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@+id/DOplusicon"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="O+"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14dp" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/DOminusButtonID"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/genderstoke">
+
+                                <ImageView
+                                    android:id="@+id/DOminusicon"
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/clircle_box"></ImageView>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@+id/DOminusicon"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="O-"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14dp" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/DAAbplusButtonID"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/genderstoke">
+
+                                <ImageView
+                                    android:id="@+id/DAbplusicon"
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/clircle_box"></ImageView>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@+id/DAbplusicon"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="AB+"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14dp" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/DAbminusButtonID"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/genderstoke">
+
+                                <ImageView
+                                    android:id="@+id/DAbminusicon"
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/clircle_box"></ImageView>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@+id/DAbminusicon"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="AB-"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14dp" />
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/Dlocationtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/BB"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Location"
+
+                        android:textColor="#5E5E5E"
+                        android:textSize="14sp"></com.google.android.material.textview.MaterialTextView>
+
+
+                    <EditText
+                        android:id="@+id/DLocatonID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Dlocationtext"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/email_stoke"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Location"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textSize="14dp"></EditText>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/DMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/DLocatonID"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Message"
+                        android:textColor="#5E5E5E"
+
+                        android:textSize="14sp"></com.google.android.material.textview.MaterialTextView>
+
+                    <EditText
+                        android:id="@+id/DMessageID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/DMessage"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="7dp"
+                        android:background="@drawable/email_stoke"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Type Message"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textSize="14dp"></EditText>
+
+                </RelativeLayout>
+
+
+            </ScrollView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary">
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

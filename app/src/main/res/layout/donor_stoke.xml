@@ -1,0 +1,428 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="StokeFream.DonorStoke">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+            <LinearLayout
+                android:id="@+id/OneT"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:background="#FCFFEB"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:textSize="28dp"
+                            android:layout_margin="7dp"
+                            android:text="A+"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:textColor="@android:color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/AplusText"
+                            android:textSize="14dp"
+                            android:layout_margin="7dp"
+                            android:text="Total Bag 0"
+                            android:layout_alignParentBottom="true"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="7dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:background="#FFE9CF"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:textSize="28dp"
+                            android:layout_margin="7dp"
+                            android:text="A-"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/Aminustext"
+                            android:textSize="14dp"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:layout_margin="7dp"
+                            android:text="Total Bag 0"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/TwoD"
+                android:layout_below="@+id/OneT"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:background="#FFEBC5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:textSize="28dp"
+                            android:layout_margin="7dp"
+                            android:text="B+"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:textColor="@android:color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/bplustext"
+                            android:textSize="14dp"
+                            android:layout_margin="7dp"
+                            android:text="Total Bag 0"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="7dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:background="#BFB9CA"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:textSize="28dp"
+                            android:layout_margin="7dp"
+                            android:text="B-"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:textColor="@android:color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/bminustext"
+                            android:textSize="14dp"
+                            android:layout_margin="7dp"
+                            android:text="Total Bag 0"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ThreeD"
+                android:layout_below="@+id/TwoD"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:background="#F5E0FF"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:textSize="28dp"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:layout_margin="7dp"
+                            android:text="O+"
+                            android:textColor="@android:color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/oplustext"
+                            android:textSize="14dp"
+                            android:layout_margin="7dp"
+                            android:text="Total Bag 0"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="7dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:background="#C4D6D1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:textSize="28dp"
+                            android:layout_margin="7dp"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:text="O-"
+                            android:textColor="@android:color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/ominustext"
+                            android:textSize="14dp"
+                            android:layout_margin="7dp"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:text="Total Bag 0"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/FFeD"
+                android:layout_below="@+id/ThreeD"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:background="#E7E7E7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:textSize="28dp"
+                            android:layout_margin="7dp"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:text="AB+"
+                            android:textColor="@android:color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/abplustext"
+                            android:textSize="14dp"
+                            android:layout_margin="7dp"
+                            android:text="Total Bag 0"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="7dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:background="#ECF7FF"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:textSize="28dp"
+                            android:layout_margin="7dp"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:text="AB-"
+                            android:textColor="@android:color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/abminustext"
+                            android:textSize="14dp"
+                            android:layout_margin="7dp"
+                            android:text="Total Bag 0"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

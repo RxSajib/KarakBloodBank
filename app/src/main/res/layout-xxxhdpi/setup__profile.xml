@@ -1,0 +1,734 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Profile.Setup_Profile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/LayoutID"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:layout_width="50dp"
+                android:src="@drawable/defaultimage"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_height="50dp">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/Registationtext"
+                android:layout_marginLeft="20dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+
+                android:typeface="sans"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:text="Registration"
+                android:layout_height="wrap_content">
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/ss"
+                android:layout_below="@+id/Registationtext"
+
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+
+                android:layout_marginTop="5dp"
+                android:textSize="16sp"
+                android:text="Create And Account"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/ViewID"
+            android:layout_below="@+id/LayoutID"
+            android:layout_marginTop="10dp"
+            android:background="#CECECE"
+            android:layout_width="match_parent"
+            android:layout_height="1dp">
+
+        </View>
+
+        <RelativeLayout
+            android:layout_below="@id/ViewID"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:src="@drawable/defaultimage"
+                    android:id="@+id/ProfileImageIDID"
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="80dp">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+
+                <TextView
+                    android:layout_below="@+id/ProfileImageIDID"
+                    android:visibility="gone"
+                    android:id="@+id/EmailtextID"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Your Login Or Email"
+                    android:layout_width="wrap_content"
+                    android:textColor="#5E5E5E"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <EditText
+                    android:visibility="gone"
+                    android:id="@+id/EmailInputID"
+                    android:layout_below="@id/EmailtextID"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="Your Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </EditText>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/gendertext"
+                    android:layout_below="@id/EmailInputID"
+                    android:layout_marginTop="55dp"
+                    android:text="Gender"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-condensed"
+
+                    android:textColor="#5E5E5E"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </com.google.android.material.textview.MaterialTextView>
+
+                <RelativeLayout
+                    android:id="@+id/Layouts"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/gendertext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/FemailLayoutID"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:layout_width="0dp"
+                            android:layout_marginRight="7dp"
+                            android:background="@drawable/genderstoke"
+                            android:layout_height="50dp">
+
+                            <ImageView
+                                android:id="@+id/FemaleIcon"
+                                android:layout_width="18dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/clircle_box"
+                                android:layout_height="18dp">
+                            </ImageView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Female"
+                                android:fontFamily="sans-serif-condensed"
+
+                                android:layout_toRightOf="@+id/FemaleIcon"
+                                android:layout_marginLeft="5dp"
+                                android:layout_centerVertical="true"
+                                android:textColor="@android:color/black"
+                                />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/MaleLayoutID"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/genderstoke"
+                            android:layout_marginLeft="7dp"
+                            android:layout_height="50dp">
+
+
+
+                            <ImageView
+                                android:id="@+id/Male"
+                                android:layout_width="18dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/clircle_box"
+                                android:layout_height="18dp">
+                            </ImageView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Male"
+                                android:fontFamily="sans-serif-condensed"
+
+                                android:layout_toRightOf="@+id/Male"
+                                android:layout_marginLeft="5dp"
+                                android:layout_centerVertical="true"
+                                android:textColor="@android:color/black"
+                                />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/BirthtexID"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/Layouts"
+                    android:text="Birth Date"
+                    android:textSize="16sp"
+                    android:textColor="#5E5E5E"
+                    android:fontFamily="sans-serif-condensed"
+                    android:visibility="gone"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <RelativeLayout
+                    android:id="@+id/DateButtonID"
+                    android:layout_below="@+id/BirthtexID"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:layout_height="45dp">
+
+                    <ImageView
+                        android:id="@+id/calender"
+                        android:layout_width="30dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_centerVertical="true"
+                        android:layout_height="30dp">
+                    </ImageView>
+
+                    <TextView
+                        android:fontFamily="sans-serif-condensed"
+
+                        android:id="@+id/BithDateInput"
+                        android:layout_toRightOf="@+id/calender"
+                        android:layout_marginLeft="5dp"
+                        android:layout_centerVertical="true"
+                        android:textSize="17sp"
+                        android:text="Pickup your date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/Fullnametext"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/DateButtonID"
+                    android:text="FullName"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-condensed"
+
+                    android:textColor="#5E5E5E"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="wrap_content">
+                </com.google.android.material.textview.MaterialTextView>
+
+                <EditText
+                    android:id="@+id/FullnameInputTextID"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_below="@+id/Fullnametext"
+                    android:layout_marginTop="5dp"
+                    android:padding="13dp"
+                    android:maxLength="12"
+                    android:background="@drawable/email_stoke"
+                    android:hint="Enter Full name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </EditText>
+
+                <TextView
+                    android:id="@+id/MobileNumberInput"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/FullnameInputTextID"
+                    android:text="Mobile Number"
+                    android:textSize="16sp"
+                    android:textColor="#5E5E5E"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <EditText
+                    android:id="@+id/MobileNumberInputID"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:layout_below="@+id/MobileNumberInput"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:visibility="gone"
+                    android:hint="Enter Mobile Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </EditText>
+
+                <TextView
+                    android:id="@+id/LocationtextID"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/MobileNumberInputID"
+                    android:text="Location"
+                    android:fontFamily="sans-serif-condensed"
+                    android:visibility="gone"
+                    android:textSize="16sp"
+                    android:textColor="#5E5E5E"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <EditText
+                    android:id="@+id/LocationInputID"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:fontFamily="sans-serif-condensed"
+                    android:visibility="gone"
+                    android:layout_below="@+id/LocationtextID"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:hint="Enter Your Location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </EditText>
+
+                <TextView
+                    android:id="@+id/BloodGroupID"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/LocationInputID"
+                    android:text="Blood Group"
+                    android:fontFamily="sans-serif-condensed"
+                    android:visibility="gone"
+                    android:textSize="16sp"
+                    android:textColor="#5E5E5E"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/OneLayoutID"
+                    android:layout_below="@+id/BloodGroupID"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:weightSum="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/AbplusButtonID"
+                            android:layout_width="0dp"
+                            android:background="@drawable/genderstoke"
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="45dp">
+
+                            <ImageView
+                                android:id="@+id/AplusIcon"
+                                android:layout_width="18dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/clircle_box"
+                                android:layout_height="18dp">
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="A+"
+                                android:fontFamily="sans-serif-condensed"
+
+                                android:layout_toRightOf="@+id/AplusIcon"
+                                android:layout_marginLeft="5dp"
+                                android:layout_centerVertical="true"
+                                android:textColor="@android:color/black"
+                                />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/AminusButtonID"
+                            android:layout_width="0dp"
+                            android:background="@drawable/genderstoke"
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="45dp">
+
+                            <ImageView
+                                android:id="@+id/Aminusicon"
+                                android:layout_width="18dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/clircle_box"
+                                android:layout_height="18dp">
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="A-"
+                                android:fontFamily="sans-serif-condensed"
+
+                                android:layout_toRightOf="@+id/Aminusicon"
+                                android:layout_marginLeft="5dp"
+                                android:layout_centerVertical="true"
+                                android:textColor="@android:color/black"
+                                />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/BplusButtonID"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/genderstoke"
+                            android:layout_height="45dp">
+
+                            <ImageView
+                                android:id="@+id/Bplusicon"
+                                android:layout_width="18dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/clircle_box"
+                                android:layout_height="18dp">
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="B+"
+                                android:fontFamily="sans-serif-condensed"
+
+                                android:layout_toRightOf="@+id/Bplusicon"
+                                android:layout_marginLeft="5dp"
+                                android:layout_centerVertical="true"
+                                android:textColor="@android:color/black"
+                                />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/BminusButtonID"
+                            android:layout_width="0dp"
+                            android:background="@drawable/genderstoke"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="45dp">
+
+                            <ImageView
+                                android:id="@+id/Bminusicon"
+                                android:layout_width="18dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/clircle_box"
+                                android:layout_height="18dp">
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="B-"
+                                android:fontFamily="sans-serif-condensed"
+
+                                android:layout_toRightOf="@+id/Bminusicon"
+                                android:layout_marginLeft="5dp"
+                                android:layout_centerVertical="true"
+                                android:textColor="@android:color/black"
+                                />
+
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/BB"
+                    android:layout_below="@+id/OneLayoutID"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:weightSum="4"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/OplusButtonID"
+                            android:layout_width="0dp"
+                            android:background="@drawable/genderstoke"
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="45dp">
+
+                            <ImageView
+                                android:id="@+id/Oplusicon"
+                                android:layout_width="18dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/clircle_box"
+                                android:layout_height="18dp">
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="O+"
+                                android:fontFamily="sans-serif-condensed"
+
+                                android:layout_toRightOf="@+id/Oplusicon"
+                                android:layout_marginLeft="5dp"
+                                android:layout_centerVertical="true"
+                                android:textColor="@android:color/black"
+                                />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/OminusButtonID"
+                            android:layout_width="0dp"
+                            android:background="@drawable/genderstoke"
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dp"
+                            android:layout_height="45dp">
+
+                            <ImageView
+                                android:id="@+id/Ominusicon"
+                                android:layout_width="18dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/clircle_box"
+                                android:layout_height="18dp">
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="O-"
+                                android:fontFamily="sans-serif-condensed"
+
+                                android:layout_toRightOf="@+id/Ominusicon"
+                                android:layout_marginLeft="5dp"
+                                android:layout_centerVertical="true"
+                                android:textColor="@android:color/black"
+                                />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/AAbplusButtonID"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/genderstoke"
+                            android:layout_height="45dp">
+
+                            <ImageView
+                                android:id="@+id/Abplusicon"
+                                android:layout_width="18dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/clircle_box"
+                                android:layout_height="18dp">
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AB+"
+                                android:fontFamily="sans-serif-condensed"
+
+                                android:layout_toRightOf="@+id/Abplusicon"
+                                android:layout_marginLeft="5dp"
+                                android:layout_centerVertical="true"
+                                android:textColor="@android:color/black"
+                                />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/AbminusButtonID"
+                            android:layout_width="0dp"
+                            android:background="@drawable/genderstoke"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="45dp">
+
+                            <ImageView
+                                android:id="@+id/Abminusicon"
+                                android:layout_width="18dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/clircle_box"
+                                android:layout_height="18dp">
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AB-"
+                                android:fontFamily="sans-serif-condensed"
+
+                                android:layout_toRightOf="@+id/Abminusicon"
+                                android:layout_marginLeft="5dp"
+                                android:layout_centerVertical="true"
+                                android:textColor="@android:color/black"
+                                />
+
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/RegisterButtID"
+                    android:layout_below="@+id/BB"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/profile_button_design"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_height="55dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textSize="15sp"
+                        android:text="Continue"
+                        android:textColor="@android:color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+            <View
+                android:layout_above="@+id/ButtonLayoutIDd"
+                android:layout_marginTop="10dp"
+                android:background="#CECECE"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+            </View>
+
+            <RelativeLayout
+                android:layout_alignParentBottom="true"
+                android:id="@+id/ButtonLayoutIDd"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:layout_height="50dp">
+
+
+                <TextView
+                    android:id="@+id/Vone"
+                    android:text="By creating your account you agree to out"
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-condensed"
+
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:layout_below="@+id/Vone"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-condensed"
+
+                    android:text="terms and conditions"
+                    android:textColor="#6B6FF1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

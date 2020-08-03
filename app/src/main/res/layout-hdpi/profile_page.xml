@@ -1,0 +1,310 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="AllNavagationPage.ProfilePage">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/RequestToolbarID"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+                    android:id="@+id/backIconID"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp">
+
+                </ImageView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:textSize="12sp"
+                    android:text="Profile"
+                    android:layout_toRightOf="@id/backIconID"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <RelativeLayout
+            android:layout_below="@+id/RequestToolbarID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <RelativeLayout
+                android:id="@+id/HeadLayoutID"
+                android:layout_width="match_parent"
+                android:layout_height="210dp">
+
+
+                <ImageView
+                    android:id="@+id/ProfileBackButtonID"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:elevation="1dp"
+                    android:src="@drawable/back_icon">
+
+                </ImageView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginBottom="20dp"
+                    android:elevation="3dp"
+                    app:cardCornerRadius="20dp">
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/blood_card_design">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/Blood"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="karak Blood bank"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <RelativeLayout
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/bloodoval">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/bloodicon">
+
+                                </ImageView>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/EditProfileImageID"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/defaultimage"></de.hdodenhof.circleimageview.CircleImageView>
+
+                        <TextView
+                            android:id="@+id/EditNameID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/EditProfileImageID"
+
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="UserName Not Set"
+                            android:textColor="@android:color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:typeface="sans"></TextView>
+
+                        <TextView
+                            android:id="@+id/EmailAdID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/EditNameID"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:text="Email Not Set"
+                            android:textColor="@android:color/black"
+                            android:textSize="12sp"></TextView>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_below="@+id/HeadLayoutID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/AcounttextID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="sans-serif-condensed"
+
+                        android:text="Account Info"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/UserNametext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/AcounttextID"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+
+                        android:text="UserName"
+                        android:textSize="12sp"></TextView>
+
+                    <EditText
+                        android:id="@+id/ProfileUserNameID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/UserNametext"
+                        android:layout_marginTop="5dp"
+                        android:background="#fff"
+                        android:fontFamily="sans-serif-condensed"
+android:textSize="12dp"
+                        android:hint="Your UserName"
+                        android:padding="10dp"
+                        android:singleLine="true"></EditText>
+
+                    <View
+                        android:id="@+id/Vi"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/ProfileUserNameID"
+                        android:layout_marginTop="2dp"
+                        android:background="#DBDBDB"></View>
+
+
+                    <TextView
+                        android:id="@+id/Emial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Vi"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+
+                        android:singleLine="true"
+                        android:text="Enail Address"
+                        android:textSize="12sp"></TextView>
+
+
+                    <EditText
+                        android:id="@+id/ProfileEmailID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Emial"
+                        android:layout_marginTop="5dp"
+                        android:background="#fff"
+android:textSize="12dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Your Email"
+                        android:padding="10dp"
+                        android:singleLine="true"></EditText>
+
+
+                    <View
+                        android:id="@+id/Vsi"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/ProfileEmailID"
+                        android:layout_marginTop="2dp"
+                        android:background="#DBDBDB"></View>
+
+
+                    <RelativeLayout
+                        android:id="@+id/UpdateProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/profile_button_design"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/Vsi">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="Continue"
+                            android:textColor="@android:color/white"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

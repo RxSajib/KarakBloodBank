@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:src="@drawable/defaultimage"
+            android:layout_centerVertical="true"
+            android:layout_width="45dp"
+            android:id="@+id/ImageViewID"
+            android:layout_marginLeft="20dp"
+            android:layout_height="45dp">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/Username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/layout"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="10dp"
+        android:text="UserName not set"
+        />
+
+
+    <TextView
+        android:id="@+id/UserBlood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/Username"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="@android:color/holo_red_light"
+        />
+
+
+    <TextView
+        android:id="@+id/CounterMoneyID"
+        android:layout_width="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@+id/layout"
+        android:visibility="invisible"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/UserBlood"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <View
+        android:layout_below="@+id/UserBlood"
+        android:layout_width="match_parent"
+        android:background="#969696"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="1dp">
+
+    </View>
+
+
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="RegistationPages.LoginPages">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/welcomr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Welcome back"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:typeface="monospace"></com.google.android.material.textview.MaterialTextView>
+
+        <ImageView
+            android:id="@+id/Images"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_below="@id/welcomr"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/loginlogo"></ImageView>
+
+        <EditText
+            android:id="@+id/EmailAddressID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Images"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:textSize="16sp"
+            android:backgroundTint="#456CB9"
+            android:drawableLeft="@drawable/emailicon"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:hint="Enter Email Address"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="#456CB9"></EditText>
+
+        <EditText
+            android:id="@+id/LPasswordID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EmailAddressID"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:layout_marginRight="25dp"
+            android:backgroundTint="#456CB9"
+            android:drawableLeft="@drawable/lockicon"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:textColor="#456CB9">
+
+        </EditText>
+
+
+
+
+
+
+        <RelativeLayout
+            android:layout_above="@+id/PhoneLoginID"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/login_button_design"
+            android:layout_marginRight="25dp"
+            android:id="@+id/LoginButtonID"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="16sp"
+                android:text="Login"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+        </RelativeLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/PhoneLoginID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/KKs"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:visibility="invisible"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Login Via OTP"
+            android:textColor="#2059B8"
+
+            android:textSize="18dp"
+            android:textStyle="bold">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <RelativeLayout
+            android:id="@+id/KKs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ButtonLayouTID"
+            android:layout_marginBottom="7dp"
+            android:gravity="center"
+            android:padding="7dp">
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/FaceBookButtonID"
+                android:layout_width="wrap_content"
+                android:background="@drawable/facebook_background"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7dp"
+
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:padding="8dp"
+                    android:background="@drawable/google_button_ripple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/GoogleIconID"
+                        android:src="@drawable/googlecolur"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp">
+                    </ImageView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_toRightOf="@+id/GoogleIconID"
+                        android:layout_width="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="16sp"
+                        android:text="Continue with google"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/ButtonLayouTID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:gravity="center">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/ac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Don't have an account?"
+                android:textSize="16dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/SignUpButtonID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/ac"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Sign Up"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="16dp">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

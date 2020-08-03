@@ -1,0 +1,264 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="RegistationPages.RegisterPage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/welcomr"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+
+            android:text="Sign Up"
+            android:typeface="monospace"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/WWW"
+            android:fontFamily="sans-serif-condensed"
+
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/welcomr"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"
+            android:text="Fill the details &amp; create your account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <ImageView
+            android:id="@+id/Images"
+            android:src="@drawable/loginlogo"
+            android:layout_below="@id/WWW"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="220dp"
+            android:layout_height="220dp">
+        </ImageView>
+
+
+
+        <EditText
+            android:id="@+id/PhoneNumberTextID"
+            android:layout_below="@+id/Images"
+            android:hint="Enter Phone Number"
+            android:gravity="center"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="number"
+            android:drawableLeft="@drawable/phone_icon"
+            android:textColor="#456CB9"
+            android:backgroundTint="#456CB9"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="7dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </EditText>
+
+
+        <EditText
+            android:id="@+id/REMailAddressID"
+            android:layout_below="@+id/PhoneNumberTextID"
+            android:hint="Enter Email Address"
+            android:gravity="center"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="textEmailAddress"
+            android:drawableLeft="@drawable/emailicon"
+            android:textColor="#456CB9"
+            android:backgroundTint="#456CB9"
+            android:singleLine="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="7dp"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </EditText>
+
+        <EditText
+            android:id="@+id/RRPasswordID"
+            android:layout_below="@+id/REMailAddressID"
+            android:hint="Enter Password"
+            android:fontFamily="sans-serif-condensed"
+
+            android:padding="10dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/lockicon"
+            android:textColor="#456CB9"
+            android:backgroundTint="#456CB9"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </EditText>
+
+        <EditText
+            android:id="@+id/RCPasswordID"
+            android:layout_below="@+id/RRPasswordID"
+            android:hint="Retype Password"
+            android:inputType="textPassword"
+            android:textColor="#456CB9"
+            android:backgroundTint="#456CB9"
+            android:fontFamily="sans-serif-condensed"
+
+            android:drawableLeft="@drawable/lockicon"
+            android:singleLine="true"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </EditText>
+
+        <RelativeLayout
+            android:id="@+id/RegisterButtonID"
+            android:layout_width="match_parent"
+            android:layout_above="@+id/PhoneLoginID"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/signup_button_back"
+            android:layout_height="50dp">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="15sp"
+                android:text="SignUp"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/PhoneLoginID"
+            android:layout_above="@id/KKs"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-condensed"
+
+            android:text="Login Via OTP"
+            android:layout_marginBottom="10dp"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:textColor="#2059B8"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/KKs"
+            android:padding="7dp"
+            android:visibility="invisible"
+            android:layout_above="@+id/ButtonLayouTID"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="7dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/FaceBookButtonID"
+                android:layout_width="40dp"
+                android:gravity="center"
+                android:layout_marginRight="7dp"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/RegistergoogleButtonID"
+                android:layout_toRightOf="@+id/FaceBookButtonID"
+                android:layout_width="40dp"
+                android:layout_marginRight="7dp"
+                android:gravity="center"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ButtonLayouTID"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/ac"
+                android:textSize="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+
+                android:layout_centerVertical="true"
+                android:text="I already have an account"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/HaveAccountID"
+                android:layout_toRightOf="@id/ac"
+                android:layout_marginLeft="10dp"
+                android:text="Login"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif-condensed"
+
+                android:textSize="15dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

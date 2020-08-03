@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="FeedbackPage.FeedbackPage">
+
+
+    <RelativeLayout
+        android:id="@+id/One"
+        android:background="#FD9C7F"
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/Appiconids"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/application_icon"
+                >
+
+            </ImageView>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:elevation="1dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Appiconids"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/app_name"
+                android:textColor="@android:color/primary_text_dark_nodisable"
+                android:textSize="16sp">
+
+            </TextView>
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/One"
+        >
+
+        <RelativeLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+        <EditText
+            android:id="@+id/MobileNumberID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@null"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Enter Mobile Number"
+            android:inputType="number"
+            android:padding="12dp"
+            android:singleLine="true">
+
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/CommentsID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/MobileNumberID"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:background="@null"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Enter Comments"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:padding="12dp"></EditText>
+
+        <TextView
+            android:id="@+id/ratingUsTextID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CommentsID"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Rating Us"
+            android:textColor="@android:color/black"
+
+            android:textSize="14sp">
+
+        </TextView>
+
+        <com.hsalf.smilerating.SmileRating
+            android:id="@+id/smile_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ratingUsTextID"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp">
+
+
+
+        </com.hsalf.smilerating.SmileRating>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/SubmitButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/feedback_design"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Submit"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+    </RelativeLayout>
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mAdviewID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/SubmitButtonID"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8213826839161591/6125977030">
+    </com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>

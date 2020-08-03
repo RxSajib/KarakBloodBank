@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="TabPages.RequestPage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/LayoutIF"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/SearchSpinnerID"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+            <SearchView
+                android:layout_toRightOf="@+id/SearchSpinnerID"
+                android:queryHint="Search blood or username"
+                android:id="@+id/RequesterSearchID"
+                android:elevation="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:autofillHints="Search By Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </SearchView>
+
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_below="@+id/LayoutIF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/RequestLayoutID"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/DonorIgame"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp">
+                </pl.droidsonroids.gif.GifImageView>
+
+
+                <TextView
+                    android:id="@+id/DonorText"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp"
+                    android:text="Searching The Request"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/DonorIgame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_below="@+id/LayoutIF"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/UserRecylearViewID"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

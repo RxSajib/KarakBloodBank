@@ -1,0 +1,19 @@
+package Common;
+
+
+import Remote.APIservice;
+import Remote.FCMretrofitClient;
+
+public class Common {
+
+
+    public static final String BaseUrl="https://fcm.googleapis.com/";
+
+
+
+
+    public static APIservice getFCMClient(){
+        return FCMretrofitClient.getClint(BaseUrl).create(APIservice.class);
+    }
+
+}

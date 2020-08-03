@@ -1,0 +1,227 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="AllNavagationPage.OneTouchPage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:background="@drawable/profile_updatebutton"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginRight="25dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="@string/addtext"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:id="@+id/ScrallID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/AdmobOneID"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp">
+
+
+                            <RelativeLayout
+                                android:background="@drawable/donate_background"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/dss"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="30dp"
+                                    android:src="@drawable/redlove"
+                                    android:layout_height="30dp">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_toRightOf="@id/dss"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="DONATE 5Sec"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="17dp"
+                                    android:fontFamily="sans-serif-condensed"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </TextView>
+
+                            </RelativeLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/AdmobTwo"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/AdmobOneID"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp">
+
+
+                            <RelativeLayout
+                                android:background="@drawable/donate_background"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                                <ImageView
+                                    android:id="@+id/fss"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="30dp"
+                                    android:src="@drawable/redlove"
+                                    android:layout_height="30dp">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_toRightOf="@id/fss"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="DONATE 5Sec"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="17dp"
+                                    android:fontFamily="sans-serif-condensed"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                </TextView>
+
+                            </RelativeLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/AdmobThree"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/AdmobTwo"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            app:cardCornerRadius="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp">
+
+
+
+                            <RelativeLayout
+                                android:background="@drawable/donate_background"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/ss"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="30dp"
+                                    android:src="@drawable/redlove"
+                                    android:layout_height="30dp">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_toRightOf="@id/ss"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="DONATE 5Sec"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="17dp"
+                                    android:fontFamily="sans-serif-condensed"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </TextView>
+
+                            </RelativeLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </RelativeLayout>
+
+                </ScrollView>
+
+
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:layout_above="@+id/BannerAd"
+                    android:id="@+id/AdtwoID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="ca-app-pub-8213826839161591/6125977030">
+                </com.google.android.gms.ads.AdView>
+
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/BannerAd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="ca-app-pub-8213826839161591/6125977030">
+                </com.google.android.gms.ads.AdView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

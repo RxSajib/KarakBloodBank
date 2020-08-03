@@ -1,0 +1,758 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="PostPage.RequestBloodPage">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/RequestToolbarID"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/RequestUpdateButton"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/done_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/backIconID"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp">
+
+                </ImageView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:textSize="9sp"
+                    android:text="Add Request Post"
+                    android:layout_toRightOf="@id/backIconID"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <RelativeLayout
+            android:layout_below="@+id/RequestToolbarID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/colorPrimary">
+
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:layout_above="@+id/BannerAd"
+                    android:id="@+id/AdtwoID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="ca-app-pub-8213826839161591/6125977030">
+                </com.google.android.gms.ads.AdView>
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="10dp">
+
+                <ScrollView
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <RelativeLayout
+                            android:id="@+id/RViewID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/ReciverPostprofileImageID"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/defaultimage">
+                            </de.hdodenhof.circleimageview.CircleImageView>
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:fontFamily="sans-serif-condensed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/ReciverPostprofileImageID"
+                                android:text="Upload image"
+                                android:textSize="9sp">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/View"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/RViewID"
+                            android:layout_marginTop="10dp"
+                            android:background="#969696"></View>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/nametextid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/View"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Patient Name"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textColor="#5E5E5E"
+                            android:textSize="9sp">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                        <EditText
+                            android:id="@+id/RnameID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/nametextid"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/email_stoke"
+                            android:hint="Type Name"
+                            android:textSize="9dp"
+                            android:maxLength="14"
+                            android:padding="10dp"
+                            android:singleLine="true"></EditText>
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/DageID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/RnameID"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            android:text="Age"
+                            android:textColor="#5E5E5E"
+                            android:textSize="16sp">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <RelativeLayout
+                            android:id="@+id/RAgeButtonID"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_below="@+id/DageID"
+                            android:visibility="gone"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/email_stoke">
+
+                            <Spinner
+                                android:id="@+id/RpinnerID"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="40dp"
+                                android:clickable="true"></Spinner>
+
+                            <ImageView
+                                android:id="@+id/calender"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="7dp"
+                                android:src="@drawable/ageicon"></ImageView>
+
+                        </RelativeLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/GenderID"
+                            android:layout_below="@+id/RAgeButtonID"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textSize="9dp"
+                            android:text="Gender"
+                            android:textColor="#5E5E5E"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                        <LinearLayout
+                            android:id="@+id/GenderLayout"
+                            android:weightSum="2"
+                            android:layout_below="@+id/GenderID"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/RFemailLayoutID"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:layout_width="0dp"
+                                android:layout_marginRight="7dp"
+                                android:background="@drawable/genderstoke"
+                                android:layout_height="35dp">
+
+                                <ImageView
+                                    android:id="@+id/RFemaleIcon"
+                                    android:layout_width="13dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/clircle_box"
+                                    android:layout_height="13dp">
+                                </ImageView>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Female"
+                                    android:layout_toRightOf="@+id/RFemaleIcon"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:textSize="9dp"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="@android:color/black"
+                                    />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/RMaleLayoutID"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/genderstoke"
+                                android:layout_marginLeft="7dp"
+                                android:layout_height="35dp">
+
+
+
+                                <ImageView
+                                    android:id="@+id/RMale"
+                                    android:layout_width="13dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/clircle_box"
+                                    android:layout_height="13dp">
+                                </ImageView>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Male"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:textSize="9dp"
+                                    android:layout_toRightOf="@+id/RMale"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="@android:color/black"
+                                    />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/Dbloodtext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/GenderLayout"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Blood Group"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:textColor="#5E5E5E"
+                            android:textSize="9sp">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <RelativeLayout
+                            android:id="@+id/OneLayoutID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Dbloodtext"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/RR"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="4">
+
+                                <RelativeLayout
+                                    android:id="@+id/RAplusButtonID"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/genderstoke">
+
+                                    <ImageView
+                                        android:id="@+id/RAplusIcon"
+                                        android:layout_width="13dp"
+                                        android:layout_height="13dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:src="@drawable/clircle_box"></ImageView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_toRightOf="@+id/RAplusIcon"
+                                        android:text="A+"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="9dp"
+                                        android:textColor="@android:color/black" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/RAminusButtonID"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/genderstoke">
+
+                                    <ImageView
+                                        android:id="@+id/RAminusicon"
+                                        android:layout_width="13dp"
+                                        android:layout_height="13dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:src="@drawable/clircle_box"></ImageView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_toRightOf="@+id/RAminusicon"
+                                        android:text="A-"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="9dp"
+                                        android:textColor="@android:color/black" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/RBplusButtonID"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/genderstoke">
+
+                                    <ImageView
+                                        android:id="@+id/RBplusicon"
+                                        android:layout_width="13dp"
+                                        android:layout_height="13dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:src="@drawable/clircle_box"></ImageView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_toRightOf="@+id/RBplusicon"
+                                        android:text="B+"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="9dp"
+                                        android:textColor="@android:color/black" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/RBminusButtonID"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/genderstoke">
+
+                                    <ImageView
+                                        android:id="@+id/RBminusicon"
+                                        android:layout_width="13dp"
+                                        android:layout_height="13dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:src="@drawable/clircle_box"></ImageView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_toRightOf="@+id/RBminusicon"
+                                        android:text="B-"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="9dp"
+                                        android:textColor="@android:color/black" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/BB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/OneLayoutID"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="4">
+
+                                <RelativeLayout
+                                    android:id="@+id/ROplusButtonID"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/genderstoke">
+
+                                    <ImageView
+                                        android:id="@+id/ROplusicon"
+                                        android:layout_width="13dp"
+                                        android:layout_height="13dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:src="@drawable/clircle_box"></ImageView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_toRightOf="@+id/ROplusicon"
+                                        android:text="O+"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="9dp"
+                                        android:textColor="@android:color/black" />
+                                </RelativeLayout>
+
+
+                                <RelativeLayout
+                                    android:id="@+id/ROminusButtonID"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/genderstoke">
+
+                                    <ImageView
+                                        android:id="@+id/ROminusicon"
+                                        android:layout_width="13dp"
+                                        android:layout_height="13dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:src="@drawable/clircle_box"></ImageView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_toRightOf="@+id/ROminusicon"
+                                        android:text="O-"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="9dp"
+                                        android:textColor="@android:color/black" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/RAbplusButtonID"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/genderstoke">
+
+                                    <ImageView
+                                        android:id="@+id/RAbplusicon"
+                                        android:layout_width="13dp"
+                                        android:layout_height="13dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:src="@drawable/clircle_box"></ImageView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_toRightOf="@+id/RAbplusicon"
+                                        android:text="AB+"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="9dp"
+                                        android:textColor="@android:color/black" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/RAbminusButtonID"
+                                    android:layout_width="0dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/genderstoke">
+
+                                    <ImageView
+                                        android:id="@+id/RAbminusicon"
+                                        android:layout_width="13dp"
+                                        android:layout_height="13dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:src="@drawable/clircle_box"></ImageView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_toRightOf="@+id/RAbminusicon"
+                                        android:text="AB-"
+                                        android:fontFamily="sans-serif-condensed"
+                                        android:textSize="9dp"
+                                        android:textColor="@android:color/black" />
+
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/Dmobilenumbertext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/BB"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:layout_marginTop="10dp"
+                            android:text="Mobile Number"
+                            android:textColor="#5E5E5E"
+                            android:textSize="9sp"></com.google.android.material.textview.MaterialTextView>
+
+                        <EditText
+                            android:id="@+id/RMobileNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Dmobilenumbertext"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textSize="9dp"
+                            android:maxLength="14"
+                            android:background="@drawable/email_stoke"
+                            android:hint="Mobile Number"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:singleLine="true"></EditText>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/RHospital"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/RMobileNumber"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:visibility="gone"
+                            android:text="Hospital Name"
+                            android:textColor="#5E5E5E"
+                            android:textSize="16sp"></com.google.android.material.textview.MaterialTextView>
+
+                        <EditText
+                            android:id="@+id/RHospitalInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/RHospital"
+                            android:layout_marginLeft="10dp"
+                            android:visibility="gone"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:background="@drawable/email_stoke"
+                            android:hint="Enter Hospital Name"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:singleLine="true"></EditText>
+
+                        <TextView
+                            android:id="@+id/RlacationText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/RHospitalInput"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Patient Location"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:textColor="#5E5E5E"
+                            android:textSize="9sp"></TextView>
+
+                        <EditText
+                            android:id="@+id/RLocationInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/RlacationText"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:background="@drawable/email_stoke"
+                            android:hint="Enter Location"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textSize="9dp"
+                            android:maxLength="17"
+                            android:singleLine="true"></EditText>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/RMessagetext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/RLocationInput"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Request Message"
+                            android:textColor="#5E5E5E"
+                            android:textSize="9sp">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <EditText
+                            android:id="@+id/Rinputmessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/RMessagetext"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/email_stoke"
+                            android:fontFamily="sans-serif-condensed"
+                            android:hint="Type message"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textSize="9dp"
+                            android:singleLine="true"></EditText>
+
+
+                    </RelativeLayout>
+                </ScrollView>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimary">
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
