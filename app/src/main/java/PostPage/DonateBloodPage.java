@@ -534,11 +534,11 @@ public class DonateBloodPage extends Fragment {
 
 
 
-        String nametext = name.getText().toString();
+        final String nametext = name.getText().toString();
         //AgeString
         String mobilenumbertext = mobilenumber.getText().toString();
         String locationtext = location.getText().toString();
-        String posttext = post.getText().toString();
+        final String posttext = post.getText().toString();
 
         if(nametext.isEmpty()){
             name.setError("Name require");
@@ -612,16 +612,17 @@ public class DonateBloodPage extends Fragment {
                             if(task.isSuccessful()){
                                 Mprogress.dismiss();
 
-
-
+                                name.setText(null);
+                                mobilenumber.setText(null);
+                                location.setText(null);
+                                post.setText(null);
                               /*  Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
                                 finish();*/
 
-
                                 Toast.makeText(getActivity(), "post upload success", Toast.LENGTH_LONG).show();
-
+                                getActivity().getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
 
                               /*  DonarpostRef.addValueEventListener(new ValueEventListener() {
                                     @Override

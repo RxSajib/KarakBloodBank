@@ -80,9 +80,7 @@ public class LoginPages extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.login_pages, container, false);
-
         printHashKey(getContext());
-
         gotoregistertext = view.findViewById(R.id.SignUpButtonID);
         gotoregistertext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,12 +90,8 @@ public class LoginPages extends Fragment {
         });
 
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
-
         mCallbackManager = CallbackManager.Factory.create();
-
         facebookbutton = view.findViewById(R.id.FaceBookButtonID);
-
-
 
       /*  facebookbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -180,10 +174,6 @@ public class LoginPages extends Fragment {
             }
         });
 
-
-
-
-
         creatrequest();
 
         facebookbutton.setOnClickListener(new View.OnClickListener() {
@@ -196,7 +186,6 @@ public class LoginPages extends Fragment {
         return view;
     }
 
-
    /* @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -204,7 +193,6 @@ public class LoginPages extends Fragment {
         // Pass the activity result back to the Facebook SDK
         mCallbackManager.onActivityResult(requestCode, resultCode, data);
     }*/
-
 
     @Override
     public void onStart() {
@@ -224,7 +212,6 @@ public class LoginPages extends Fragment {
             transaction.replace(R.id.WelcomeContiner, fragment);
             transaction.commit();
         }
-
 
     }
 
@@ -256,7 +243,6 @@ public class LoginPages extends Fragment {
                 });
     }
 
-
     public static void printHashKey(Context pContext) {
         try {
             PackageInfo info = pContext.getPackageManager().getPackageInfo(pContext.getPackageName(), PackageManager.GET_SIGNATURES);
@@ -273,8 +259,6 @@ public class LoginPages extends Fragment {
         }
     }
 
-
-
     private void creatrequest(){
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -288,7 +272,6 @@ public class LoginPages extends Fragment {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
-
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -310,10 +293,6 @@ public class LoginPages extends Fragment {
         }
     }
 
-
-
-
-
     private void firebaseAuthWithGoogle(String idToken) {
 
         Mprogres.setTitle("Wait for a moment ...");
@@ -332,20 +311,16 @@ public class LoginPages extends Fragment {
                             Log.d(TAG, "signInWithCredential:success");
                             goto_homecontiner(new HomeContiner());
 
-
-
                         } else {
                             Mprogres.dismiss();
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             Toast.makeText(getActivity(), "error", Toast.LENGTH_LONG).show();
                         }
-
                         // ...
                     }
                 });
     }
-
 
     private void goto_registertext(Fragment fragment){
         if(fragment != null){

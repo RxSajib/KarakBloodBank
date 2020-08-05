@@ -259,7 +259,6 @@ public class ChatPage extends Fragment {
             SendingJob.setMessage("Please wait sending your file");
             SendingJob.setCanceledOnTouchOutside(false);
             SendingJob.show();
-
             imageuri = data.getData();
             if (SendType.equals("image")) {
                 setlogogdatabase();

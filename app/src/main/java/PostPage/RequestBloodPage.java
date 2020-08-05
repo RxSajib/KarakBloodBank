@@ -512,17 +512,11 @@ public class RequestBloodPage extends Fragment {
 
     private void StartingUpdatepost(){
 
-
-
-
-
-
         String nametext = name.getText().toString();
         String mobilenumbertext = mobilenumber.getText().toString();
         String hospitalnametext = hospitalname.getText().toString();
         String locationtext = hospitallocation.getText().toString();
         String messagetext = messageinput.getText().toString();
-
 
         if(nametext.isEmpty()){
             name.setError("Name require");
@@ -580,8 +574,6 @@ public class RequestBloodPage extends Fragment {
             postmap.put("search_username", loginusernameget.toLowerCase());
 
 
-
-
             Mpostdatabase.push().updateChildren(postmap)
                     .addOnCompleteListener(new OnCompleteListener() {
                         @Override
@@ -593,7 +585,14 @@ public class RequestBloodPage extends Fragment {
                                 startActivity(intent);
                                 finish();
                                 Toast.makeText(getApplicationContext(), "post upload success", Toast.LENGTH_LONG).show();
+
                             */
+                           name.setText(null);
+                           mobilenumber.setText(null);
+                            hospitalname.setText(null);
+                            hospitallocation.setText(null);
+                            messageinput.setText(null);
+                                getActivity().getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
 
                             }
                             else {

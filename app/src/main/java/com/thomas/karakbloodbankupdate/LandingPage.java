@@ -42,7 +42,6 @@ public class LandingPage extends Fragment {
         loginbutton = view.findViewById(R.id.LoginButtonIDID);
         registerbutton = view.findViewById(R.id.SigUpButtonID);
 
-
         loginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,15 +100,12 @@ public class LandingPage extends Fragment {
 
 
     private void goto_homepgecontiner(Fragment fragment){
-
         if(fragment != null){
             FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
             transaction.setCustomAnimations(R.anim.slider_from_right    , R.anim.slide_outfrom_left);
             transaction.replace(R.id.WelcomeContiner, fragment);
             transaction.commit();
         }
-
-
     }
 
 
@@ -119,9 +115,7 @@ public class LandingPage extends Fragment {
 
         FirebaseUser Muser = Mauth.getCurrentUser();
         if(Muser != null){
-
             gotohomecontiner(new HomeContiner());
-
         }
     }
 
@@ -133,7 +127,5 @@ public class LandingPage extends Fragment {
             transaction.replace(R.id.MainFreamContiner, fragment);
             transaction.commit();
         }
-
-
     }
 }
