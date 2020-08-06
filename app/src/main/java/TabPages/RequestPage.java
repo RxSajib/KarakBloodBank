@@ -251,13 +251,14 @@ public class RequestPage extends Fragment {
                                             if (dataSnapshot.hasChild("patentname")) {
                                                 String nam = dataSnapshot.child("patentname").getValue().toString();
 
-                                                donarHolder.setProfileimagebellow_nameset(nam);
+                                                donarHolder.setUsernameset(nam);
 
                                             }
 
                                             if (dataSnapshot.hasChild("loginusername")) {
                                                 String nam = dataSnapshot.child("loginusername").getValue().toString();
-                                                donarHolder.setUsernameset(nam);
+
+                                                donarHolder.setProfileimagebellow_nameset(nam);
                                             }
 
                                             if (dataSnapshot.hasChild("Image_downloadurl")) {
@@ -431,13 +432,14 @@ public class RequestPage extends Fragment {
                                             if (dataSnapshot.hasChild("patentname")) {
                                                 String nam = dataSnapshot.child("patentname").getValue().toString();
 
-                                                donarHolder.setProfileimagebellow_nameset(nam);
+                                                donarHolder.setUsernameset(nam);
 
                                             }
 
                                             if (dataSnapshot.hasChild("loginusername")) {
                                                 String nam = dataSnapshot.child("loginusername").getValue().toString();
-                                                donarHolder.setUsernameset(nam);
+
+                                                donarHolder.setProfileimagebellow_nameset(nam);
                                             }
 
                                             if (dataSnapshot.hasChild("Image_downloadurl")) {
@@ -614,13 +616,14 @@ public class RequestPage extends Fragment {
                                             }
                                             if (dataSnapshot.hasChild("patentname")) {
                                                 String nam = dataSnapshot.child("patentname").getValue().toString();
-                                                donarHolder.setProfileimagebellow_nameset(nam);
 
+                                                donarHolder.setUsernameset(nam);
                                             }
                                             //
                                             if (dataSnapshot.hasChild("loginusername")) {
                                                 String nam = dataSnapshot.child("loginusername").getValue().toString();
-                                                donarHolder.setUsernameset(nam);
+
+                                                donarHolder.setProfileimagebellow_nameset(nam);
                                             }
 
                                             if (dataSnapshot.hasChild("message")) {
@@ -736,7 +739,7 @@ public class RequestPage extends Fragment {
             chaaticon = Mview.findViewById(R.id.DChatID);
             context = Mview.getContext();
             profileimage = Mview.findViewById(R.id.RprofileImageCardID);
-            profileimagebellow_name = Mview.findViewById(R.id.RusernameDonarID);
+            profileimagebellow_name = Mview.findViewById(R.id.CurrentUserName);
             username = Mview.findViewById(R.id.RUsernames);
             Mobilenumber = Mview.findViewById(R.id.RDonarPhoneNumberID);
             Location = Mview.findViewById(R.id.RDonarocationID);

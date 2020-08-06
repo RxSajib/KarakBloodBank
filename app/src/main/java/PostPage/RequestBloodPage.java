@@ -419,7 +419,6 @@ public class RequestBloodPage extends Fragment {
         hospitalname = view.findViewById(R.id.RHospitalInput);
         hospitallocation = view.findViewById(R.id.RLocationInput);
 
-
         Mpostdatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {

@@ -71,8 +71,6 @@ public class DonorPage extends Fragment {
         View view = inflater.inflate(R.layout.donor_page, container, false);
 
 
-
-
         infolayout = view.findViewById(R.id.DonorLayoutID);
 
         searchspinner = view.findViewById(R.id.SearchSpinnersID);
@@ -198,7 +196,7 @@ public class DonorPage extends Fragment {
                                             if (dataSnapshot.hasChild("DonarPost")) {
                                                 String donarname = dataSnapshot.child("DonarPost").getValue().toString();
                                                 donarHolder.setUsernameset(donarname);
-                                                donarHolder.setProfileimagenamebellowset(donarname);
+
                                             }
                                             if (dataSnapshot.hasChild("donar_number")) {
                                                 String number = dataSnapshot.child("donar_number").getValue().toString();
@@ -221,17 +219,16 @@ public class DonorPage extends Fragment {
                                                 donarHolder.donar_date(date);
                                             }
 
-
                                             if (dataSnapshot.hasChild("login_name")) {
                                                 String name = dataSnapshot.child("login_name").getValue().toString();
-                                                donarHolder.setUsernameset(name);
+                                                donarHolder.setProfileimagenamebellowset(name);
 
                                             }
 
-                                            //
                                             if (dataSnapshot.hasChild("donar_name")) {
                                                 String name = dataSnapshot.child("donar_name").getValue().toString();
-                                                donarHolder.setProfileimagenamebellowset(name);
+
+                                                donarHolder.setUsernameset(name);
                                             }
 
 
@@ -366,7 +363,7 @@ public class DonorPage extends Fragment {
                                             if (dataSnapshot.hasChild("DonarPost")) {
                                                 String donarname = dataSnapshot.child("DonarPost").getValue().toString();
                                                 donarHolder.setUsernameset(donarname);
-                                                donarHolder.setProfileimagenamebellowset(donarname);
+
                                             }
                                             if (dataSnapshot.hasChild("donar_number")) {
                                                 String number = dataSnapshot.child("donar_number").getValue().toString();
@@ -393,7 +390,7 @@ public class DonorPage extends Fragment {
                                             if (dataSnapshot.hasChild("login_name")) {
                                                 String name = dataSnapshot.child("login_name").getValue().toString();
                                                 donarHolder.setUsernameset(name);
-
+                                                donarHolder.setProfileimagenamebellowset(name);
                                             }
 
                                             //
@@ -422,7 +419,6 @@ public class DonorPage extends Fragment {
                                                         }
                                                     });
 
-
                                                 }
                                             }
 
@@ -436,7 +432,6 @@ public class DonorPage extends Fragment {
 
 
                                                     likeboolen = true;
-
                                                     MLikeDatabase.addValueEventListener(new ValueEventListener() {
                                                         @Override
                                                         public void onDataChange(DataSnapshot dataSnapshot) {
@@ -571,13 +566,12 @@ public class DonorPage extends Fragment {
 
                                             if (dataSnapshot.hasChild("login_name")) {
                                                 String name = dataSnapshot.child("login_name").getValue().toString();
-                                                donarHolder.setUsernameset(name);
-
+                                                donarHolder.setProfileimagenamebellowset(name);
                                             }
 
                                             if (dataSnapshot.hasChild("donar_name")) {
                                                 String name = dataSnapshot.child("donar_name").getValue().toString();
-                                                donarHolder.setProfileimagenamebellowset(name);
+                                                donarHolder.setUsernameset(name);
                                             }
 
                                             if (dataSnapshot.hasChild("date")) {
@@ -707,7 +701,7 @@ public class DonorPage extends Fragment {
             Location = Mview.findViewById(R.id.DonarocationID);
             Blood = Mview.findViewById(R.id.DonarBlooad);
             profileimage = Mview.findViewById(R.id.profileImageCardID);
-            profileimagenamebellow = Mview.findViewById(R.id.usernameDonarID);
+            profileimagenamebellow = Mview.findViewById(R.id.UserNameTexts);
             donarmessage = Mview.findViewById(R.id.MessageTextID);
 
             toplayout = Mview.findViewById(R.id.CardViewID);
